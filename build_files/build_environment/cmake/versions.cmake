@@ -220,7 +220,7 @@ set(TIFF_HOMEPAGE http://www.simplesystems.org/libtiff/)
 # changes that make the Cycles OptiX implementation work. Official 1.12 OSL
 # releases should also build but without OptiX support.
 set(OSL_VERSION 1.13.7.0)
-set(OSL_URI https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/archive/refs/tags/v${OSL_VERSION}.tar.gz)
+set(OSL_URI https://github.com/N8icuss/PP_A-M_OSL/archive/refs/tags/v${OSL_VERSION}.tar.gz)
 set(OSL_HASH 769ae444a7df0e6561b3e745fd2eb50d)
 set(OSL_HASH_TYPE MD5)
 set(OSL_FILE OpenShadingLanguage-${OSL_VERSION}.tar.gz)
