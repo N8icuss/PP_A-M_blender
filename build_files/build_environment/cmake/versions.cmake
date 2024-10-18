@@ -219,9 +219,15 @@ set(TIFF_HOMEPAGE http://www.simplesystems.org/libtiff/)
 # Recent commit from 1.13.5.0 under development, which includes string table
 # changes that make the Cycles OptiX implementation work. Official 1.12 OSL
 # releases should also build but without OptiX support.
+<<<<<<< HEAD
 set(OSL_VERSION aa0b12883477df4302967b029a310174939a6de7)
 set(OSL_URI https://github.com/N8icuss/PP_A-M_OSL/archive/refs/heads/main.zip)
 set(OSL_HASH aa0b12883477df4302967b029a310174939a6de7)
+=======
+set(OSL_VERSION 9917fbb4b2104721b917149b8f287167143ea8fa)
+set(OSL_URI https://github.com/N8icuss/PP_A-M_OSL/archive/refs/heads/main.zip)
+set(OSL_HASH 9917fbb4b2104721b917149b8f287167143ea8fa)
+>>>>>>> 4267c7f7a0dd2584008bb41dad1e9f623e81076d
 set(OSL_HASH_TYPE MD5)
 set(OSL_FILE PP_A-M_OSL-main.zip)
 
