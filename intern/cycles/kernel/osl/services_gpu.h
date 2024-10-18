@@ -212,6 +212,35 @@ ccl_device_extern ccl_private OSLClosure *osl_add_closure_closure(ccl_private Sh
   return closure;
 }
 
+ccl_device_extern ccl_private OSLClosure *osl_mul_closure_closure(ccl_private ShaderGlobals *sg,
+                                                                  ccl_private OSLClosure *a,
+                                                                  ccl_private OSLClosure *b)
+{
+  if (!a) {
+    return b;
+  }
+  if (!b) {
+    return a;
+  }
+
+  ccl_private ShaderData *const sd = static_cast<ccl_private ShaderData *>(sg->renderstate);
+
+  ccl_private uint8_t *closure_pool = sd->osl_closure_pool;
+  /* Align pointer to closure struct requirement */
+  closure_pool = reinterpret_cast<uint8_t *>(
+      (reinterpret_cast<size_t>(closure_pool) + alignof(OSLClosureAdd) - 1) &
+      (-alignof(OSLClosureAdd)));
+  sd->osl_closure_pool = closure_pool + sizeof(OSLClosureAdd);
+
+  ccl_private OSLClosureAdd *const closure = reinterpret_cast<ccl_private OSLClosureAdd *>(
+      closure_pool);
+  closure->id = OSL_CLOSURE_ADD_ID;
+  closure->closureA = a;
+  closure->closureB = b;
+
+  return closure;
+}
+
 ccl_device_extern ccl_private OSLClosure *osl_allocate_closure_component(
     ccl_private ShaderGlobals *sg, int id, int size)
 {
