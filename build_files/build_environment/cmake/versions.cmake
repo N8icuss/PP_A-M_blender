@@ -219,11 +219,11 @@ set(TIFF_HOMEPAGE http://www.simplesystems.org/libtiff/)
 # Recent commit from 1.13.5.0 under development, which includes string table
 # changes that make the Cycles OptiX implementation work. Official 1.12 OSL
 # releases should also build but without OptiX support.
-set(OSL_VERSION 1.13.7.0)
-set(OSL_URI https://github.com/N8icuss/PP_A-M_OSL/archive/refs/tags/v${OSL_VERSION}.tar.gz)
-set(OSL_HASH 769ae444a7df0e6561b3e745fd2eb50d)
+set(OSL_VERSION aa0b12883477df4302967b029a310174939a6de7)
+set(OSL_URI https://github.com/N8icuss/PP_A-M_OSL/archive/refs/heads/main.zip)
+set(OSL_HASH aa0b12883477df4302967b029a310174939a6de7)
 set(OSL_HASH_TYPE MD5)
-set(OSL_FILE OpenShadingLanguage-${OSL_VERSION}.tar.gz)
+set(OSL_FILE PP_A-M_OSL-main.zip)
 
 # NOTE: When updating the python version, it's required to check the versions of
 # it wants to use in PCbuild/get_externals.bat for the following dependencies:
